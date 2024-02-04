@@ -1,15 +1,28 @@
-# HousePricePerdiction
-House price prediction using 79 variables
-The dataset is obtained from Kaggle and it contains 79 variables and 1640 entries.
-For the prediction of saleprice (target variable). The following is the workflow.
-# 1. Explporatory Data Analysis:
-    It includes analysis of target variable: normality, outliers, linearity, homoscedasiticity
-    Highly correlated numeric convariables (continuous) and their analysis : normality, outliers, linearity, homoscedasiticity
-    Analysis on categorical variables (High Seperating Power)
-# 2. Data Wrangling:
-    It includes finding null values and based on their correlation and extent of nulls in the variable t; the decision on the variavle whether to     drop, impute will be taken also  mode of imputation bsed on the variable
-    Creation of flags for certain variables
-    Applying transformations to adjust normality etc from EDA (using log, sqrt and cbrt)
-    Normalization of numeric columns and Onehot encoding for categorical variables
-# 3. Simple regression models
-    
+# House Price Prediction
+Predicting house prices using 79 variables. The dataset, obtained from Kaggle, contains 79 variables and 1640 entries. The target variable is the sale price.
+
+## 1. Exploratory Data Analysis (EDA):
+This phase includes an analysis of the target variable, examining normality, outliers, linearity, and homoscedasticity. For highly correlated numeric variables (continuous), a similar analysis is conducted, examining normality, outliers, linearity, and homoscedasticity. Categorical variables with high separating power are also analyzed.
+
+## 2. Data Wrangling:
+This step involves identifying null values and deciding whether to drop or impute them based on their correlation and the extent of nulls in the variable. The mode of imputation is determined by the variable. Flags are created for certain variables, and transformations are applied to adjust normality based on the EDA findings (using log, sqrt, and cbrt). Numeric columns are normalized, and categorical variables are subjected to one-hot encoding.
+
+## 3. Simple Regression Models:
+Various models, including CatBoost, XGBoost, LGBoost, RandomForest, and SVM, are used. The models are evaluated using RMSE, and further hyperparameter tuning is performed.
+
+## 4. Hyperparameter Tuning:
+RandomSearchCV and GridSearchCV are employed to find the best-fit parameters, with RMSE as the scoring metric for evaluation.
+
+## 5. Stacking Model and Voting Model:
+Stacking and voting models are built based on the results of the base models.
+
+## 6. Neural Network:
+A neural network is implemented.
+
+## 7. Model Evaluation:
+RMSE values of all models are compared, and CatBoost is selected based on the lowest RMSE.
+
+## 8. Prediction on Test Set:
+The best model, CatBoost, is used for predicting house prices on the test set obtained from Kaggle.
+
+Note: Ensure that the variable names, model names, and details are accurate and consistent throughout the document. Adjust as needed based on your actual workflow and results.
