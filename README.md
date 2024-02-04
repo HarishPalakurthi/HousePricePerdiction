@@ -17,7 +17,7 @@ RandomSearchCV and GridSearchCV are employed to find the best-fit parameters, wi
 Stacking and voting models are built based on the results of the base models.
 
 ## 6. Neural Network:
-A neural network is implemented.
+A neural network with dropout is implemented.
 
 ## 7. Model Evaluation:
 RMSE values of all models are compared, and CatBoost is selected based on the lowest RMSE.
